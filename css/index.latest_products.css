@@ -38,6 +38,7 @@
   font-size: 60px;
   line-height: 60px;
   font-weight: 400;
+  text-align: start;
   color: var(--color-primary-white);
   font-family: var(--font-title);
   margin: 30px 0;
