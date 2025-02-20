@@ -88,10 +88,12 @@
 @media (min-width: 768px) {
   .latest-products__title {
     font-size: 84px;
+    line-height: 84px;
   }
 }
 @media (min-width: 992px) {
   .latest-products__title {
     font-size: 109px;
+    line-height: 109px;
   }
 }
