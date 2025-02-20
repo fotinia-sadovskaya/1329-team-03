@@ -34,7 +34,7 @@
 }
 
 .latest-products__title {
-  font-size: 109px;
+  font-size: 60px;
   color: var(--color-primary-white);
   font-family: var(--font-title);
   text-align: start;
@@ -90,8 +90,8 @@
     font-size: 84px;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 992px) {
   .latest-products__title {
-    font-size: 60px;
+    font-size: 109px;
   }
 }
