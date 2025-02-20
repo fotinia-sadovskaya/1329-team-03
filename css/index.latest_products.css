@@ -86,13 +86,11 @@
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
-
   .latest-products__title {
     font-size: 84px;
   }
 }
 @media (min-width: 420px) and (max-width: 768px) {
-
   .latest-products__title {
     font-size: 84px;
   }
