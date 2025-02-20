@@ -1,64 +1,56 @@
-.latest_products {
+.latest_products { 
   background: url("../img/last_products/last_products.png");
   background-size: cover;
-  background-position: 75% 65%;
+  background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   z-index: 1;
+  padding: 60px 20px;
 }
 
 .latest_products__container {
   position: relative;
-  display: block;
-  min-width: 320px;
-  padding: 130px 40px;
-  justify-content: flex-start;
-  width: 56%;
+  max-width: 1200px; /* Центруємо контейнер */
+  width: 100%;
+  padding: 50px 20px;
 }
 
 .latest-products__content {
-  position: relative;
-  display: block;
-  min-width: 320px;
-  /* padding: 0 30px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .latest-products_icon {
-  width: 100px;
-}
-
-.latest-products_path {
-  color: var(--color-accent-additional);
+  width: 80px; /* Менше на мобільних */
 }
 
 .latest-products__title {
-  font-size: 60px;
+  font-size: 40px;
+  line-height: 1.2;
   color: var(--color-primary-white);
   font-family: var(--font-title);
-  text-align: start;
-  margin-bottom: 30px;
-  margin: 0;
-  padding: 0;
+  margin: 20px 0;
 }
 
 .latest-products__description {
   color: var(--color-menu-items);
-  text-align: left;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 26.6 px;
+  line-height: 1.6;
   font-family: var(--font-text);
-  margin: 35px 0;
+  margin: 20px 0;
 }
 
 .latest-products__list {
   display: flex;
-  color: var(--color-primary-white);
-  font-family: var(--font-text);
-  font-size: 12px;
-  line-height: 16.8px;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 0;
   list-style: none;
 }
@@ -66,11 +58,11 @@
 .latest-products__list-item {
   position: relative;
   padding-left: 15px;
-  margin-right: 25px;
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: 700;
-  letter-spacing: 2.4px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
 
 .latest-products__list-item::before {
@@ -85,15 +77,33 @@
   background-color: var(--color-accent-additional);
 }
 
+/* ======== МЕДІА ЗАПИТИ ========= */
 @media (min-width: 768px) {
   .latest-products__title {
-    font-size: 84px;
-    line-height: 84px;
+    font-size: 50px;
+  }
+
+  .latest-products_icon {
+    width: 90px;
   }
 }
+
 @media (min-width: 992px) {
   .latest-products__title {
-    font-size: 109px;
-    line-height: 109px;
+    font-size: 70px;
+  }
+
+  .latest-products_icon {
+    width: 100px;
+  }
+
+  .latest-products__list {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .latest-products__title {
+    font-size: 90px;
   }
 }
