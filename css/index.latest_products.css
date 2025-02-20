@@ -90,7 +90,7 @@
 /* ======== МЕДІА ЗАПИТИ ========= */
 @media (min-width: 768px) {
   .latest-products__title {
-    font-size: 50px;
+    font-size: 84px;
   }
 
   .latest-products_icon {
@@ -100,7 +100,7 @@
 
 @media (min-width: 992px) {
   .latest-products__title {
-    font-size: 70px;
+    font-size: 109px;
   }
 
   .latest-products_icon {
@@ -112,13 +112,7 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .latest-products__title {
-    font-size: 90px;
-  }
-}
-/* 
-.latest_products {
+/* .latest_products {
   background: url("../img/last_products/last_products.png");
   background-size: cover;
   background-position: 75% 65%;
@@ -142,7 +136,6 @@
   position: relative;
   display: block;
   min-width: 320px;
-  /* padding: 0 30px; */
 }
 
 .latest-products_icon {
