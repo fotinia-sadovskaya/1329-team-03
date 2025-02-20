@@ -13,6 +13,9 @@
 }
 
 .latest_products__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   min-width: 320px; 
   width: 100%;
@@ -24,6 +27,7 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  width: 50%;
 }
 
 .latest-products_icon {
@@ -100,6 +104,12 @@
 }
 
 @media (min-width: 992px) {
+
+  .latest-products__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .latest-products__title {
     font-size: 109px;
     padding-right: 50%;
@@ -208,3 +218,62 @@
     line-height: 109px;
   }
 } */
+
+/* .latest-products {
+  background-color: #000;
+  color: white;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.latest-products__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.latest-products__content {
+  width: 50%;
+}
+
+.latest-products__title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.latest-products__description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.latest-products__image {
+  width: 50%;
+  text-align: right;
+}
+
+.latest-products__image img {
+  max-width: 100%;
+  height: auto;
+} */
+
+/* === АДАПТАЦІЯ === */
+/* @media (max-width: 992px) {
+  .latest-products__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .latest-products__content, 
+  .latest-products__image {
+    width: 100%;
+  }
+
+  .latest-products__image {
+    margin-top: 20px;
+  }
+} */
+
