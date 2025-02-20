@@ -85,10 +85,11 @@
   background-color: var(--color-accent-additional);
 }
 
-@media (min-width: 767px) {
- 
+@media (min-width: 767px) and (max-width: 991px) {
+  .latest_products__container {
+    padding: 130px 20px;
+  }
   .latest-products__title {
     font-size: 84px;
   }
- 
 }
