@@ -441,15 +441,15 @@
           padding: 18px;
           position: relative;
           text-align: center;
-          max-height: 450px;
+          max-height: 400px;
 /* 
           @media (min-width: 850px) and (max-width: 955px) {
             min-height: 450px;
           } */
-
+/* 
           @media (min-width: 1050px) {
             max-height: 360px;
-          }
+          } */
 /* 
           @media (min-width: 1100px) {
             min-height: 360px;
