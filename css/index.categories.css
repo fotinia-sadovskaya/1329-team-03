@@ -103,7 +103,8 @@
             cursor: pointer;
             display: flex;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 500;
+            color: var(--color-primary);
             justify-content: space-between;
             outline: none;
             padding: 10px 0;
@@ -111,9 +112,9 @@
             width: 100%;
 
             @media (min-width: 992px) {
-              font-size: 1.35rem;
+              font-size: 1.32rem;
               font-weight: 500;
-              line-height: 29.4px;
+              line-height: 1.4;
             }
 
             .accordion-arrow {
