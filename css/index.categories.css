@@ -329,7 +329,7 @@
               .filters__countdown-icon {
                 width: 100%;
                 height: auto;
-                max-width: 140px;
+                min-width: 140px;
 
                 .filters__countdown-rect {
                   stroke: var(--color-accent);
