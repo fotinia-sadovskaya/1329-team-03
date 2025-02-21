@@ -1,7 +1,7 @@
-.latest_products { 
+.latest_products {
   background: url("../img/last_products/last_products.png");
   background-size: cover;
-  background-position: 75% 65%;;
+  background-position: 75% 65%;
   background-repeat: no-repeat;
   position: relative;
   display: flex;
@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-  min-width: 320px; 
+  min-width: 320px;
   width: 100%;
   padding: 50px 20px;
 }
@@ -52,7 +52,7 @@
   color: var(--color-menu-items);
   font-size: 19px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 1.4;
   font-family: var(--font-text);
   margin: 35px 0;
 }
@@ -104,7 +104,6 @@
 }
 
 @media (min-width: 992px) {
-
   .latest-products__container {
     flex-direction: column;
     text-align: center;

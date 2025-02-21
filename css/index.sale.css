@@ -1,55 +1,45 @@
-.sale__wrapper {
-  text-align: center;
+.sale__carousel {
+  display: flex;
+  flex-direction: column;
+  vertical-align: baseline;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
 }
-.sale__title {
+
+.product-gallery__items {
   display: block;
-  color: var(--color-accent-additional);
-  font-family: var(--font-text);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2.4px;
-  justify-content: center;
-  padding-top: 46px;
-  margin: 0px 0px 20px;
+  margin: 0 24px;
 }
-.sale__description {
-  font-size: 64px;
-  font-family: var(--font-title);
-}
-@media (max-width: 990px) {
-  .sale__description {
-    font-size: 52px;
-  }
-}
-@media (max-width: 770px) {
-  .sale__description {
-    font-size: 40px;
-  }
-}
-.sale__description span {
-color: #1c4c97;
-}
-.sale__note {
-  font-family: var(--font-text);
-  font-weight: 600;
-  color: #6a6a6a;
-  font-size: 19px;
-  margin: 30px 0px;
-}
-@media (max-width: 770px) {
-  .sale__note {
-    font-weight: normal;
-  }
-}
-@media (min-width: 990px) {
+
 .product-gallery__grid {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: space-between;
-    margin: 100px 70px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  gap: 30px;
 }
+
+.product-gallery__grid > .product-card {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Забезпечує рівномірний розподіл */
+  height: 100%; /* Робить картку повної висоти */
+}
+
+.product-gallery__grid > .product-card .btn-primary {
+  margin-top: 24px; /* Додає відступ від контенту зверху */
+  align-self: flex-start; /* Вирівнює кнопку ліворуч */
+  margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
+}
+
 .product-card {
   max-width: 100%;
   width: 250px;

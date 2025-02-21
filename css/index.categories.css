@@ -8,15 +8,6 @@
     background-color: var(--color-primary-white);
     padding: 60px 24px 40px 24px;
 
-    .section__title {
-      color: var(--color-accent-additional);
-      font-family: var(--font-text);
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 14px;
-      text-transform: uppercase;
-    }
-
     /* Кнопка для відкриття/закриття фільтрів (для мобільних) */
     .filters__toggle {
       align-items: center;

@@ -136,5 +136,49 @@ body.overflow-hidden {
   border: none;
   height: 1px;
   background-color: var(--color-divider);
-  margin: 15.5px 0;
+  margin: 15px 0;
+}
+
+.title {
+  font-family: var(--font-text);
+  color: var(--color-accent-additional);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  .divider-span {
+    font-family: var(--font-title);
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 780px) {
+    font-size: 52px;
+  }
+
+  @media (min-width: 990px) {
+    font-size: 64px;
+  }
+}
+
+.description {
+  font-family: var(--font-text);
+  color: var(--color-text-body);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
 }

@@ -37,51 +37,6 @@
       flex-direction: column;
       flex-basis: 100%;
       text-align: center;
-
-      .deals__title {
-        display: block;
-        color: var(--color-accent-additional);
-        font-family: var(--font-text);
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 2.4px;
-        line-height: 16.8px;
-        margin: 0;
-      }
-
-      .deals__subtitle {
-        display: block;
-        color: var(--color-text-primary);
-        font-family: var(--font-title);
-        font-size: 40px;
-        font-weight: 400;
-        line-height: 48px;
-        margin-top: 20px;
-        margin-bottom: 0;
-
-        .deals__divider {
-          color: var(--color-accent);
-        }
-
-        @media (min-width: 768px) and (max-width: 991px) {
-          font-size: 52px;
-          line-height: 62.4px;
-        }
-
-        @media (min-width: 992px) {
-          font-size: 64px;
-          line-height: 76.8px;
-        }
-      }
-
-      .deals__description {
-        color: var(--color-text-secondary);
-        font-family: var(--font-text);
-        font-size: 19px;
-        font-weight: 600;
-        line-height: 26.6px;
-        margin-top: 25px;
-      }
     }
 
     .deals__content {
