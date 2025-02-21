@@ -10,107 +10,105 @@
     padding: 120px 0;
   }
 
-    .testimonials__image-container {
-      position: relative;
-      display: block;
-      min-width: 272px;
-      max-height: 600px;
-      background-image: url("../img/our-clients-about-us/person.webp");
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 10px;
-      margin-top: 50px;
-      z-index: 1;
-      overflow: hidden;
-    }
+  .testimonials__image-container {
+    position: relative;
+    display: block;
+    min-width: 272px;
+    max-height: 600px;
+    background-image: url("../img/our-clients-about-us/person.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-top: 50px;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
+
+.testimonials__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    justify-content: space-around;
   }
 
-  .testimonials__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+  .testimonials__content {
+    padding: 0 15px;
+    flex: 1;
+    text-align: center;
+    min-width: 260px;
+    max-width: 700px;
+    min-height: 150px;
 
-    @media (min-width: 768px) {
-      justify-content: space-around;
-    }
+    .testimonials__article {
+      padding: 0 27px;
 
-    .testimonials__content {
-      padding: 0 15px;
-      flex: 1;
-      text-align: center;
-      min-width: 260px;
-      max-width: 700px;
-      min-height: 150px;
+      @media (min-width: 768px) {
+        padding: 0 28px;
+      }
 
+      @media (min-width: 992px) {
+        padding: 0 30px;
+      }
 
-      .testimonials__article {
-        padding: 0 27px;
+      .testimonials__icon-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin: 40px 0 20px 0;
+
+        .testimonials__icon {
+          display: block;
+          min-width: 50px;
+          color: var(--color-header-brand);
+        }
+      }
+
+      .testimonials__author {
+        font-family: var(--font-text);
+        color: var(--color-header-primary-bg);
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
 
         @media (min-width: 768px) {
-          padding: 0 28px;
+          font-size: 23px;
         }
 
         @media (min-width: 992px) {
-          padding: 0 30px;
-        }
-
-        .testimonials__icon-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-content: center;
-          margin: 40px 0 20px 0;
-
-          .testimonials__icon {
-            display: block;
-            min-width: 50px;
-            color: var(--color-header-brand);
-          }
-        }
-
-        .testimonials__author {
-          font-family: var(--font-text);
-          color: var(--color-header-primary-bg);
-          font-size: 22px;
-          font-weight: bold;
-          text-align: center;
-          margin-bottom: 20px;
-
-          @media (min-width: 768px) {
-            font-size: 23px;
-          }
-
-          @media (min-width: 992px) {
-            font-size: 24px;
-          }
-        }
-
-        .testimonials__text {
-          font-family: var(--font-text);
-          color: var(--color-text-body);
-          font-size: 17px;
-          text-align: center;
-          margin-bottom: 20px;
-        }
-
-        .testimonials__date {
-          font-family: var(--font-text);
-          color: var(--color-header-secondary-accent);
-          font-size: 14px;
-          font-weight: bold;
-          text-align: center;
-          margin-bottom: 20px;
+          font-size: 24px;
         }
       }
-    }
 
-    .testimonials__prev,
-    .testimonials__next {
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
+      .testimonials__text {
+        font-family: var(--font-text);
+        color: var(--color-text-body);
+        font-size: 17px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .testimonials__date {
+        font-family: var(--font-text);
+        color: var(--color-header-secondary-accent);
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
+  }
+
+  .testimonials__prev,
+  .testimonials__next {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
   }
 }
