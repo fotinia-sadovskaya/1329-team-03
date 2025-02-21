@@ -317,7 +317,7 @@
           .filters__countdown-content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 10px;
 
             .filters__countdown-item {
               display: flex;
@@ -329,7 +329,7 @@
               .filters__countdown-icon {
                 width: 100%;
                 height: auto;
-                max-width: 100px;
+                max-width: 120px;
 
                 .filters__countdown-rect {
                   stroke: var(--color-accent);
@@ -341,7 +341,7 @@
                 .countdown-hours,
                 .countdown-minutes,
                 .countdown-seconds {
-                  font-size: 36px;
+                  font-size: 46px;
                   font-family: var(--font-title);
                   fill: var(--color-primary);
                 }
@@ -349,7 +349,7 @@
 
               .filters__countdown-label {
                 margin-top: 10px;
-                font-size: 23px;
+                font-size: 36px;
                 color: var(--color-primary);
                 opacity: 0.54;
               }
