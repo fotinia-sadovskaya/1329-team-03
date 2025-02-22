@@ -437,7 +437,7 @@
         }
 
         .card {
-          padding: 0;
+          /* padding: 0; */
           margin: 0;
           border: none;
           display: flex;
@@ -446,10 +446,10 @@
           height: 100%; /* Робить картку повної висоти */
           /* background-color: var(--color-primary-white);
           border-radius: 8px;
-          box-shadow: 0 4px 8px var(--card-box-shadow);    
-          padding: 18px;
+          box-shadow: 0 4px 8px var(--card-box-shadow);     */
+          padding: 8px;
           position: relative;
-          text-align: center; */
+          /* text-align: center; */
           /* max-height: 400px; */
         }
 
