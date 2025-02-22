@@ -432,7 +432,14 @@
         }
 
         .card {
-          background-color: var(--color-primary-white);
+          padding: 0;
+          margin: 0;
+          border: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; /* Забезпечує рівномірний розподіл */
+          height: 100%; /* Робить картку повної висоти */
+          /* background-color: var(--color-primary-white);
           border-radius: 8px;
           box-shadow: 0 4px 8px var(--card-box-shadow);
           display: flex;
@@ -441,8 +448,15 @@
           padding: 18px;
           position: relative;
           text-align: center;
-          max-height: 400px;
+          max-height: 400px; */
+        }
 
+          .card > .btn-primary {
+            margin-top: 24px; /* Додає відступ від контенту зверху */
+            align-self: flex-start; /* Вирівнює кнопку ліворуч */
+            margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
+          }
+          
           @media (min-width: 850px) and (max-width: 955px) {
             min-height: 450px;
           }
