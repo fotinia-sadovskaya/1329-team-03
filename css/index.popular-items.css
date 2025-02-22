@@ -1,116 +1,116 @@
 /* POPULAR ITEMS */
 .popular-items {
-    display: flex;
-    flex-direction: column;
-    vertical-align: baseline;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
- 
-  .popular-products__products-content {
-    display: block;
-    padding: 30px 0 60px;
-    margin-top: 50px;
-  }
-  
-  .popular-products__header {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .popular-products__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 40px;
-    margin-top: 30px;
-    gap: 30px;
-  }
-
-  .popular-products__badge-bottom-pro {
-    position: absolute;
-    bottom: 10px;
-    left: 0x;
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-family: var(--font-text);
-    font-size: 17px;
-    font-weight: 400;
-    padding: 4px 8px;
-    height: 32px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  .popular-products__badge-out-of.stock-pro {
-    background: var(--badge-out-of-stock-background);
-    color: var(--badge-out-of-stock-color);
-  }
-  
-  .badge__pre-order {
-    background: var(--badge-preorder-background);
-    color: var(--badge-preorder-color);
-  }
-
-  .popular-products__choose-currency {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .popular-products__list > .product-card {
-    padding: 0;
-    margin: 0;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Забезпечує рівномірний розподіл */
-    height: 100%; /* Робить картку повної висоти */
-  }
-
-  .popular-products__list > .product-card .btn-primary {
-    margin-top: 24px; /* Додає відступ від контенту зверху */
-    align-self: flex-start; /* Вирівнює кнопку ліворуч */
-    margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
+  display: flex;
+  flex-direction: column;
+  vertical-align: baseline;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-  .popular-products__currency-label {
-    color: var(--color-text-body);
-    font-family: var(--font-text);
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 29px;
-  }
-  
-  #currency-select {
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-family: var(--font-text);
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    background-color: var( --color-header-brand);
-    color: var(--color-primary-white);
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
+.popular-products__products-content {
+  display: block;
+  padding: 30px 0 60px;
+  margin-top: 50px;
+}
+
+.popular-products__header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+}
+
+.popular-products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.popular-products__badge-bottom-pro {
+  position: absolute;
+  bottom: 10px;
+  left: 0x;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 400;
+  padding: 4px 8px;
+  height: 32px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.popular-products__badge-out-of.stock-pro {
+  background: var(--badge-out-of-stock-background);
+  color: var(--badge-out-of-stock-color);
+}
+
+.badge__pre-order {
+  background: var(--badge-preorder-background);
+  color: var(--badge-preorder-color);
+}
+
+.popular-products__choose-currency {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.popular-products__list > .product-card {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Забезпечує рівномірний розподіл */
+  height: 100%; /* Робить картку повної висоти */
+}
+
+.popular-products__list > .product-card .btn-primary {
+  margin-top: 24px; /* Додає відступ від контенту зверху */
+  align-self: flex-start; /* Вирівнює кнопку ліворуч */
+  margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
+}
+
+.popular-products__currency-label {
+  color: var(--color-text-body);
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 29px;
+}
+
+#currency-select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--color-header-brand);
+  color: var(--color-primary-white);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
 #currency-select:hover {
   background-color: var(--color-primary);
   transition: var(--transiton-primary-all);
-  }
+}
 
-  #currency-select:focus {
-    outline: none;
-    border-color: none;
-  }
+#currency-select:focus {
+  outline: none;
+  border-color: none;
+}
