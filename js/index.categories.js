@@ -56,13 +56,13 @@ function renderCards(cards, rate = 1, currencySymbol = "$") {
     // Встановлюємо внутрішній HTML для кожної картки
     // Якщо картка має промо-мітку, показуємо її
     cardElement.innerHTML = `
-        <div class="card__image-container">          
+        <div class="card__image-container">                    
+          <img src="${card.image}" alt="${card.name}" class="card__image" />
           ${
             card.promoLabel
               ? `<span class="card__label">${card.promoLabel}</span>`
               : ""
-          }          
-          <img src="${card.image}" alt="${card.name}" class="card__image" />
+          }
           ${
             isOutOfStock
               ? `<div class="badge-bottom-pro badge-out-of-stock-pro">

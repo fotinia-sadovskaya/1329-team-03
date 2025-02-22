@@ -422,9 +422,9 @@
           justify-content: start;
         }
 
-        @media (min-width: 1100px) {
+        /* @media (min-width: 1100px) {
           grid-auto-rows: minmax(auto, 450px);
-        }
+        } */
 
         @media (min-width: 1160px) {
           grid-template-columns: repeat(4, minmax(200px, 1fr));
@@ -456,7 +456,7 @@
             align-self: flex-start; /* Вирівнює кнопку ліворуч */
             margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
           }
-          
+
           @media (min-width: 850px) and (max-width: 955px) {
             min-height: 450px;
           }
