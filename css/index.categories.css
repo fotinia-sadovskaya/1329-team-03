@@ -462,6 +462,19 @@
             margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
           }
 
+          .card__label {
+            background-color: var(--color-secondary-button);
+            border-radius: 4px;
+            color: var(--color-primary-white);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 21px;
+            left: 10px;
+            padding: 4px 8px;
+            position: absolute;
+            top: 10px;
+          }
+
           @media (min-width: 850px) and (max-width: 955px) {
             min-height: 450px;
           }
