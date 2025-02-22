@@ -206,7 +206,7 @@
             .price-inputs {
               display: flex;
               justify-content: center;
-              gap: 20px;
+              gap: 10px;
               margin-top: 10px;
             }
 
@@ -216,7 +216,7 @@
               border-radius: 4px;
               border: none;
               font-size: 0.9rem;
-              min-width: 80px;
+              min-width: 84px;
               text-align: center;
               outline: none;
               transition: border 0.2s ease;
