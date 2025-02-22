@@ -82,6 +82,13 @@
   margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
 }
 
+.popular-products__choose-currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .popular-products__currency-label {
   color: var(--color-text-body);
   font-family: var(--font-text);
