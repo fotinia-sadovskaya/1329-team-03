@@ -367,6 +367,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      vertical-align: baseline;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
 
       @media (min-width: 992px) {
         max-width: 78%; /* Вміст займає 78% ширини */
@@ -446,8 +451,8 @@
           flex-direction: column;
           justify-content: space-between;
           padding: 18px; */
-          position: relative;
-          text-align: center;
+          /* position: relative;
+          text-align: center; */
           max-height: 400px;
         }
 
