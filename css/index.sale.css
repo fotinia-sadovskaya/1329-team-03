@@ -61,6 +61,14 @@
   padding: 0px 15px;
 }
 
+.sale__choose-currency-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: first baseline;
+  gap: 20px;
+}
+
 .swiper-container {
   position: relative;
   flex: 0 0 14%;
