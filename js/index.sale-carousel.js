@@ -3,7 +3,7 @@ function initSaleCarousel() {
   const categoryFilter = document.querySelector("#category-filter");
 
   // Завантаження JSON-файлу
-  fetch("api/products.json")
+  fetch("api/sale.json")
     .then((response) => response.json())
     .then((products) => {
       let saleProducts = products.filter(
