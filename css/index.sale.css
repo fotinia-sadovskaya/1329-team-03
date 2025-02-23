@@ -1,4 +1,4 @@
-.sale {
+/* .sale {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,18 +40,97 @@
   border: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Забезпечує рівномірний розподіл */
-  height: 100%; /* Робить картку повної висоти */
+  justify-content: space-between;
+  height: 100%;
 }
 
 .product-gallery__grid > .product-card .btn-primary {
-  margin-top: 24px; /* Додає відступ від контенту зверху */
-  align-self: flex-start; /* Вирівнює кнопку ліворуч */
-  margin-bottom: 0; /* Переконуємось, що кнопка не має зайвих відступів знизу */
+  margin-top: 24px;
+  align-self: flex-start;
+  margin-bottom: 0;
 }
 
 .product-card {
   max-width: 100%;
   width: 250px;
   padding: 0px 15px;
+} */
+
+.sale {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.sale__carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-card__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card__price-old {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.product-card__price-new {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.btn-disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff6600;
+}
+
+.sale__filters {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sale__filter-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
