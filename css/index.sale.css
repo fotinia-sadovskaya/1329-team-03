@@ -112,7 +112,7 @@
 .btn-disabled {
   background: gray;
   cursor: not-allowed;
-}
+} */
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -121,7 +121,7 @@
 
 .swiper-pagination-bullet-active {
   background: #ff6600;
-} */
+}
 
 .sale__filters {
   margin-bottom: 20px;
