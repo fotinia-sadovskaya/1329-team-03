@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "name": "PixelView Flex",
+        "price": 199.99,
+        "oldPrice": 210.00,
+        "category": "monitors",
+        "image": "img/hero-index/popular/pixelview-flex.png",
+        "promoLabel": "sale",
+        "colors": [
+            "white"
+        ],
+        "connections": [
+            "HDMI",
+            "VGA",
+            "DisplayPort"
+        ],
+        "screenSizes": [
+            "21.5",
+            "24",
+            "27"
+        ],
+        "stockStatus": "Out of stock"
+    },
+    {
+        "id": 2,
+        "name": "PulseSound 202",
+        "price": 105.00,
+        "oldPrice": 135.00,
+        "category": "headphones",
+        "image": "img/categories-cards/pulsesound.png",
+        "promoLabel": "sale",
+        "colors": [
+            "pink"
+        ],
+        "connections": [
+            "wired",
+            "wireless"
+        ],
+        "screenSizes": [],
+        "stockStatus": "Pre-order"
+    },
+    {
+        "id": 3,
+        "name": "NeuroKey 1000",
+        "price": 65.00,
+        "oldPrice": 72.00,
+        "category": "keyboards",
+        "image": "img/categories-cards/neurokey.png",
+        "promoLabel": "sale",
+        "colors": [
+            "blue"
+        ],
+        "connections": [
+            "wired",
+            "wireless"
+        ],
+        "screenSizes": [],
+        "stockStatus": "In stock"
+    },
+    {
+        "id": 4,
+        "name": "Grip X5",
+        "price": 32.00,
+        "oldPrice": 38.00,
+        "category": "mice",
+        "image": "/img/categories-cards/aerogrip.png",
+        "promoLabel": "sale",
+        "colors": [
+            "red",
+            "black",
+            "green"
+        ],
+        "connections": [
+            "wired",
+            "wireless"
+        ],
+        "screenSizes": [],
+        "stockStatus": "In stock"
+    },
+    {
+        "id": 5,
+        "name": "SyncView",
+        "price": 225.99,
+        "oldPrice": 240.00,
+        "category": "monitors",
+        "image": "img/categories-cards/syncview.png",
+        "promoLabel": "sale",
+        "colors": [
+            "black",
+            "green"
+        ],
+        "connections": [],
+        "screenSizes": [
+            "19",
+            "21.5",
+            "24"
+        ],
+        "stockStatus": "In stock"
+    }
+]

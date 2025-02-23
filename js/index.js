@@ -3,7 +3,7 @@ function init() {
   import("./index.hero.js");
   import("./index.popular-items.js");
   import("./index.categories.js");
-  import("./index.sale-carousel.js");
+  import("./index.sale.js");
   import("./index.swiper.js");
   import("./index.countdown.js");
   import("./index.news.js");
