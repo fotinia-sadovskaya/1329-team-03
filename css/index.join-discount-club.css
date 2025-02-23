@@ -5,7 +5,7 @@
   background-image: url("../img/join-discount-club/background-discount-club.webp");
   background-size: cover;
   background-position: center;
-  border-radius: 7px;
+  border-radius: 10px;
   padding: 56px;
 }
 @media (max-width: 520px) {

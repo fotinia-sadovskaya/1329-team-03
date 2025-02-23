@@ -6,7 +6,7 @@
 
   .categories__container {
     background-color: var(--color-primary-white);
-    padding: 60px 24px 40px 24px;
+    padding: 120px 24px 40px 24px;
 
     /* Кнопка для відкриття/закриття фільтрів (для мобільних) */
     .filters__toggle {
