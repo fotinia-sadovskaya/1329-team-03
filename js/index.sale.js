@@ -1,9 +1,14 @@
+import { addProductToCart } from "./global.cart.js";
+
+let productsData = []; // Глобальна змінна для збереження продуктів
+let currencies;
+
 function initSaleCarousel() {
   const carouselContainer = document.querySelector(".product-gallery__grid");
   const categoryFilter = document.querySelector("#category-filter");
 
   // Завантаження JSON-файлу
-  fetch("api/sale.json")
+  fetch("api/cards.json")
     .then((response) => response.json())
     .then((products) => {
       let saleProducts = products.filter(
@@ -31,10 +36,11 @@ function initSaleCarousel() {
   // Функція рендерингу товарів
   function renderProducts(products) {
     carouselContainer.innerHTML = ""; // Очищення контейнера
-
-    products.forEach((product) => {
+    
+products.forEach((product) => {
       const productCard = document.createElement("article");
       productCard.classList.add("product-card");
+
 
       productCard.innerHTML = `
           <a href="#" class="product-card__link">
@@ -75,7 +81,27 @@ function initSaleCarousel() {
         `;
 
       carouselContainer.appendChild(productCard);
+    }
+    const productsContainer = document.querySelector(".product-gallery__grid");
+  if (!productsContainer) {
+    console.error("Element .product-gallery__grid not found!");
+    return;
+  }
+productsContainer.innerHTML = productsHTML
+  // Додаємо обробник кліків для кнопок "Buy now"
+  document.querySelectorAll(".card__button--cart").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const productName = event.target.dataset.name;
+      const productPrice = parseFloat(event.target.dataset.price);
+
+      if (productName && !isNaN(productPrice)) {
+        addProductToCart(productName, productPrice);
+        console.log(`Added to cart: ${productName}, $${productPrice}`);
+      } else {
+        console.error("Error: Product data is missing or incorrect");
+      }
     });
+  });
 
     // Ініціалізація каруселі
     initCarousel();
