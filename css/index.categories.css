@@ -396,7 +396,7 @@
           font-family: var(--font-text);
           font-size: 14px;
           font-weight: 600;
-          text-align: center;
+          text-align: left;
           background-color: var(--color-header-brand);
           color: var(--color-primary-white);
           border: none;
