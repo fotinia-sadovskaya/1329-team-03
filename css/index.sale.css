@@ -104,7 +104,7 @@
   border-color: none;
 }
 
-.swiper-container {
+.sale__carousel {
   position: relative;
   flex: 0 0 14%;
   background: rgba(39, 39, 39, 0.03);
