@@ -109,9 +109,9 @@
 .btn-primary-orange-center {
   background-color: var(--color-accent-additional);
   color: var(--color-primary-white);
-  padding: 12px 21px;
+  padding: 15px 40px;
   font-family: var(--font-text);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   text-decoration: none;
   margin-top: 24px;
