@@ -1,18 +1,23 @@
 import { addProductToCart } from "./global.cart.js";
 
-let productsData = []; // Глобальна змінна для збереження продуктів
+let productsData = [];
 
 function initSaleCarousel() {
+  console.log("initSaleCarousel is running!"); // Перевірка, чи працює код
+
   const carouselTrack = document.querySelector(".product-gallery__track");
   const prevButton = document.querySelector(".carousel__prev");
   const nextButton = document.querySelector(".carousel__next");
-  const categoryFilter = document.querySelector("#category-filter");
+
+  if (!carouselTrack || !prevButton || !nextButton) {
+    console.error("Карусельні елементи не знайдено!");
+    return;
+  }
 
   let slideIndex = 0;
-  const slideWidth = 300; // Ширина одного товару (змінюй за потреби)
-  const slidesToShow = 3; // Кількість товарів, що видно одночасно
+  const slideWidth = 300; // Ширина одного товару
+  const slidesToShow = 3;
 
-  // Завантаження JSON
   fetch("api/cards.json")
     .then((response) => response.json())
     .then((products) => {
@@ -21,25 +26,11 @@ function initSaleCarousel() {
       );
 
       renderProducts(saleProducts);
-
-      // Фільтр за категоріями
-      categoryFilter.addEventListener("change", function () {
-        const selectedCategory = categoryFilter.value;
-        let filteredProducts = saleProducts;
-
-        if (selectedCategory !== "all") {
-          filteredProducts = saleProducts.filter(
-            (product) => product.category === selectedCategory
-          );
-        }
-
-        renderProducts(filteredProducts);
-      });
     })
     .catch((error) => console.error("Error loading products:", error));
 
   function renderProducts(products) {
-    carouselTrack.innerHTML = ""; // Очищення треку
+    carouselTrack.innerHTML = "";
 
     products.forEach((product) => {
       const productCard = document.createElement("article");
@@ -49,13 +40,6 @@ function initSaleCarousel() {
         <a href="#" class="product-card__link">
           <img class="product-card__image" src="${product.image}" alt="${product.name}" />
           <button type="button" class="btn btn-secondary">${product.promoLabel}</button>
-          ${
-            product.stockStatus.toLowerCase() === "out of stock"
-              ? `<div class="popular-products__badge-bottom-pro popular-products__badge-out-of-stock-pro">
-                  <span class="badge__out-of-stock">Out of stock</span>
-                </div>`
-              : ""
-          }
         </a>
         <h5 class="product-card__title">
           <a href="#" class="product-card__name">${product.name}</a>
@@ -64,14 +48,8 @@ function initSaleCarousel() {
           <span class="product-card__price-old">$${product.oldPrice.toFixed(2)} USD</span>
           <span class="product-card__price-new">$${product.price.toFixed(2)} USD</span>
         </div>
-        <button class="btn ${
-          product.stockStatus.toLowerCase() === "out of stock"
-            ? "btn-disabled"
-            : "btn-primary"
-        } card__button--cart" type="button"
-        data-name="${product.name}" data-price="${product.price}" ${
-        product.stockStatus.toLowerCase() === "out of stock" ? "disabled" : ""
-      }>
+        <button class="btn btn-primary card__button--cart" type="button"
+        data-name="${product.name}" data-price="${product.price}">
           Buy now
         </button>
       `;
@@ -79,7 +57,6 @@ function initSaleCarousel() {
       carouselTrack.appendChild(productCard);
     });
 
-    // Додаємо обробник кліків для кнопок "Buy now"
     document.querySelectorAll(".card__button--cart").forEach((button) => {
       button.addEventListener("click", (event) => {
         const productName = event.target.dataset.name;
@@ -88,13 +65,10 @@ function initSaleCarousel() {
         if (productName && !isNaN(productPrice)) {
           addProductToCart(productName, productPrice);
           console.log(`Added to cart: ${productName}, $${productPrice}`);
-        } else {
-          console.error("Error: Product data is missing or incorrect");
         }
       });
     });
 
-    // Перезапускаємо карусель
     slideIndex = 0;
     updateCarousel();
   }
@@ -120,7 +94,6 @@ function initSaleCarousel() {
   });
 }
 
-// Викликаємо функцію одразу
 initSaleCarousel();
 
 

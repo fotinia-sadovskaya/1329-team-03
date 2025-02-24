@@ -104,7 +104,7 @@
   border-color: none;
 }
 
-.sale__carousel {
+/* .sale__carousel {
   position: relative;
   flex: 0 0 14%;
   background: rgba(39, 39, 39, 0.03);
@@ -118,7 +118,7 @@
 
 .carousel__prev,
 .carousel__next {
-  background: var(--color-accent); /* Або ваш колір (наприклад, синій) */
+  background: var(--color-accent);
   color: #fff;
   border: none;
   width: 40px;
@@ -149,7 +149,46 @@
 
 .carousel__next {
   right: 15px;
+} */
+
+.sale__carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+
+.product-gallery__track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card {
+  width: 300px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel__prev {
+  left: 10px;
+}
+
+.carousel__next {
+  right: 10px;
+}
+
 
 .swiper-pagination {
   position: absolute;
