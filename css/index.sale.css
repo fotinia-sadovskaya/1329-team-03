@@ -19,7 +19,7 @@
   margin: 0 auto;
   padding: 0;
   /* padding: 60px 20px; */
-  overflow-x: hidden;
+  overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .product-gallery__grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
   justify-content: center;
   align-items: center;
