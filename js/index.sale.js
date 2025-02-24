@@ -1,13 +1,22 @@
 import { addProductToCart } from "./global.cart.js";
 
 let productsData = []; // Глобальна змінна для збереження продуктів
-let currencies;
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSaleCarousel();
+});
 
 function initSaleCarousel() {
-  const carouselContainer = document.querySelector(".product-gallery__grid");
+  const carouselTrack = document.querySelector(".product-gallery__track");
+  const prevButton = document.querySelector(".carousel__prev");
+  const nextButton = document.querySelector(".carousel__next");
   const categoryFilter = document.querySelector("#category-filter");
 
-  // Завантаження JSON-файлу
+  let slideIndex = 0;
+  const slideWidth = 300; // Ширина одного товару (змінюй, якщо треба)
+  const slidesToShow = 3; // Скільки товарів одночасно видно
+
+  // Завантаження JSON
   fetch("api/cards.json")
     .then((response) => response.json())
     .then((products) => {
@@ -17,7 +26,7 @@ function initSaleCarousel() {
 
       renderProducts(saleProducts);
 
-      // Додаємо слухача змін на фільтрі категорій
+      // Фільтр за категоріями
       categoryFilter.addEventListener("change", function () {
         const selectedCategory = categoryFilter.value;
         let filteredProducts = saleProducts;
@@ -33,97 +42,86 @@ function initSaleCarousel() {
     })
     .catch((error) => console.error("Error loading products:", error));
 
-  // Функція рендерингу товарів
   function renderProducts(products) {
-    carouselContainer.innerHTML = ""; // Очищення контейнера
-    
-products.forEach((product) => {
+    carouselTrack.innerHTML = ""; // Очищення треку
+
+    products.forEach((product) => {
       const productCard = document.createElement("article");
       productCard.classList.add("product-card");
 
-
       productCard.innerHTML = `
-          <a href="#" class="product-card__link">
-            <img class="product-card__image" src="${product.image}" alt="${
-        product.name
-      }" />
-            <button type="button" class="btn btn-secondary">${
-              product.promoLabel
-            }</button>
-            ${
-              product.stockStatus.toLowerCase() === "out of stock"
-                ? `<div class="popular-products__badge-bottom-pro popular-products__badge-out-of-stock-pro">
-                <span class="badge__out-of-stock">Out of stock</span>
-              </div>`
-                : ""
-            }
-          </a>
-          <h5 class="product-card__title">
-            <a href="#" class="product-card__name">${product.name}</a>
-          </h5>
-          <div class="prices">
-            <span class="product-card__price-old">$${product.oldPrice.toFixed(
-              2
-            )}USD</span>
-            <span class="product-card__price-new">$${product.price.toFixed(
-              2
-            )}USD</span>
-          </div>
-          <button class="btn ${
+        <a href="#" class="product-card__link">
+          <img class="product-card__image" src="${product.image}" alt="${product.name}" />
+          <button type="button" class="btn btn-secondary">${product.promoLabel}</button>
+          ${
             product.stockStatus.toLowerCase() === "out of stock"
-              ? "btn-disabled"
-              : "btn-primary"
-          }" type="button" ${
+              ? `<div class="popular-products__badge-bottom-pro popular-products__badge-out-of-stock-pro">
+                  <span class="badge__out-of-stock">Out of stock</span>
+                </div>`
+              : ""
+          }
+        </a>
+        <h5 class="product-card__title">
+          <a href="#" class="product-card__name">${product.name}</a>
+        </h5>
+        <div class="prices">
+          <span class="product-card__price-old">$${product.oldPrice.toFixed(2)} USD</span>
+          <span class="product-card__price-new">$${product.price.toFixed(2)} USD</span>
+        </div>
+        <button class="btn ${
+          product.stockStatus.toLowerCase() === "out of stock"
+            ? "btn-disabled"
+            : "btn-primary"
+        } card__button--cart" type="button"
+        data-name="${product.name}" data-price="${product.price}" ${
         product.stockStatus.toLowerCase() === "out of stock" ? "disabled" : ""
       }>
-            Buy now
-          </button>
-        `;
+          Buy now
+        </button>
+      `;
 
-      carouselContainer.appendChild(productCard);
-    }
-    const productsContainer = document.querySelector(".product-gallery__grid");
-  if (!productsContainer) {
-    console.error("Element .product-gallery__grid not found!");
-    return;
-  }
-productsContainer.innerHTML = productsHTML
-  // Додаємо обробник кліків для кнопок "Buy now"
-  document.querySelectorAll(".card__button--cart").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const productName = event.target.dataset.name;
-      const productPrice = parseFloat(event.target.dataset.price);
-
-      if (productName && !isNaN(productPrice)) {
-        addProductToCart(productName, productPrice);
-        console.log(`Added to cart: ${productName}, $${productPrice}`);
-      } else {
-        console.error("Error: Product data is missing or incorrect");
-      }
+      carouselTrack.appendChild(productCard);
     });
+
+    // Додаємо обробник кліків для кнопок "Buy now"
+    document.querySelectorAll(".card__button--cart").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const productName = event.target.dataset.name;
+        const productPrice = parseFloat(event.target.dataset.price);
+
+        if (productName && !isNaN(productPrice)) {
+          addProductToCart(productName, productPrice);
+          console.log(`Added to cart: ${productName}, $${productPrice}`);
+        } else {
+          console.error("Error: Product data is missing or incorrect");
+        }
+      });
+    });
+
+    // Перезапускаємо карусель
+    slideIndex = 0;
+    updateCarousel();
+  }
+
+  function updateCarousel() {
+    const offset = -(slideIndex * slideWidth);
+    carouselTrack.style.transform = `translateX(${offset}px)`;
+  }
+
+  prevButton.addEventListener("click", () => {
+    if (slideIndex > 0) {
+      slideIndex--;
+      updateCarousel();
+    }
   });
 
-    // Ініціалізація каруселі
-    initCarousel();
-  }
-
-  // Функція ініціалізації каруселі (залежить від бібліотеки, наприклад, Swiper)
-  function initCarousel() {
-    if (typeof Swiper !== "undefined") {
-      new Swiper(".sale__carousel", {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        },
-      });
+  nextButton.addEventListener("click", () => {
+    const maxSlides = carouselTrack.children.length - slidesToShow;
+    if (slideIndex < maxSlides) {
+      slideIndex++;
+      updateCarousel();
     }
-  }
+  });
 }
 
 
