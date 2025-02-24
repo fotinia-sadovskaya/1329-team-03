@@ -105,7 +105,7 @@ let currencies;
 // Функція отримання даних
 async function fetchProducts() {
   try {
-    const response = await fetch("./api/sale.json"); // Завантажуємо JSON
+    const response = await fetch("./api/cards.json"); // Завантажуємо JSON
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
