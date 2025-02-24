@@ -126,8 +126,14 @@
             <span class="product-card__price-new">$65,00USD</span>
           </div>
           <button class="btn btn-primary" type="submit">Buy now</button>
-        </article>
-        <article class="product-card">
+        </article> -->
+
+        <article
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="./cards/aerogrip.html"
+      ></article>
+        <!-- <article class="product-card">
           <a href="#" class="product-card__link">
             <button type="button" class="btn btn-secondary">Sale</button>
             <div class="product-card__preview">
