@@ -9,9 +9,13 @@
   overflow-x: hidden;
 }
 
+.slider-wrapper {
+  overflow: hidden;
+}
+
 .slider-container {
   position: relative;
-  max-width: 1200px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   vertical-align: baseline;
@@ -29,7 +33,7 @@
 }
 
 .product-gallery__grid {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
   justify-content: center;
   align-items: center;
