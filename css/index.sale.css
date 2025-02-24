@@ -116,8 +116,8 @@
   justify-content: center;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.carousel__prev,
+.carousel__next {
   background: var(--color-accent); /* Або ваш колір (наприклад, синій) */
   color: #fff;
   border: none;
@@ -137,17 +137,17 @@
   transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
+.carousel__next:hover,
+.scarousel__prev:hover {
   background: #aaa;
   opacity: 1;
 }
 
-.swiper-button-prev {
+.carousel__prev {
   left: 15px;
 }
 
-.swiper-button-next {
+.carousel__next {
   right: 15px;
 }
 
