@@ -9,13 +9,9 @@
   overflow-x: hidden;
 }
 
-.slider-wrapper {
-  overflow: hidden;
-}
-
-.slider-container {
+.sale__carousel {
   position: relative;
-  min-width: 320px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   vertical-align: baseline;
@@ -23,7 +19,7 @@
   margin: 0 auto;
   padding: 0;
   /* padding: 60px 20px; */
-  overflow: hidden;
+  overflow-x: hidden;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -120,7 +116,7 @@
   border: 1px solid #ccc;
 }
 
-/* .swiper-container {
+.swiper-container {
   position: relative;
   flex: 0 0 14%;
   background: rgba(39, 39, 39, 0.03);
@@ -130,56 +126,62 @@
   display: flex;
   align-items: center;
   justify-content: center;
-} */
-
-/* .swiper-button-next,
-.swiper-button-prev {
-  background: var(--color-accent);
-  color: #fff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
-} */
-/* 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: #aaa;
-  opacity: 1;
 }
 
-.swiper-button-prev {
-  left: 15px;
-}
-
-.swiper-button-next {
-  right: 15px;
-}
-
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
+.slider-container {
+  position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+  /* Залежно від вашого дизайну:
+     background: #fdf9f5; 
+     або var(--color-header-light-accent); */
+  background-color: var(--color-header-light-accent);
+  border-radius: 10px;
 }
 
-.swiper-pagination-bullet-active {
-  background: var(--color-header-brand);
-} */
+/* Внутрішній обгортковий блок */
+.slider-wrapper {
+  overflow: hidden;
+}
 
+/* Основна стрічка слайдів */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* За бажанням можна прибрати/додати внутрішні відступи */
+  padding: 20px 30px;
+}
+
+/* Кожен окремий слайд */
+.slide {
+  /* 6 слайдів на екрані >1200px */
+  flex: 0 0 14%;
+  background: rgba(39, 39, 39, 0.03);
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  
+  /* Прибираємо aspect-ratio, щоб слайди не були завеликі по висоті */
+  /* aspect-ratio: 4 / 3;  <-- видалено */
+  
+  /* Додаємо флекс-центрування контенту */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Якщо потрібно додати відступи між слайдами,
+     можна використати margin: 0 5px; 
+     і не забути врахувати це у скрипті (offsetWidth + 10px) */
+}
+
+/* Зображення всередині слайда */
+.slide img {
+  max-width: 60%; /* Зменшуємо, щоб логотипи були компактні */
+  height: auto;
+}
+
+/* Кнопки "Назад" і "Вперед" */
 .slider-btn {
   background: var(--color-accent); /* Або ваш колір (наприклад, синій) */
   color: #fff;
@@ -199,6 +201,8 @@
   opacity: 0.8;
   transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
 }
+
+
 
 .slider-btn:hover {
   background: #aaa;
