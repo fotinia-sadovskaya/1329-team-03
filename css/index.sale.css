@@ -9,7 +9,7 @@
   overflow-x: hidden;
 }
 
-.sale__carousel {
+.slider-container {
   position: relative;
   max-width: 1200px;
   display: flex;
@@ -104,7 +104,19 @@
   border-color: none;
 }
 
-.swiper-container {
+.sale__filters {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sale__filter-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* .swiper-container {
   position: relative;
   flex: 0 0 14%;
   background: rgba(39, 39, 39, 0.03);
@@ -114,11 +126,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
-  background: var(--color-accent); /* Або ваш колір (наприклад, синій) */
+  background: var(--color-accent);
   color: #fff;
   border: none;
   width: 40px;
@@ -135,8 +147,8 @@
   cursor: pointer;
   opacity: 0.8;
   transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
-}
-
+} */
+/* 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: #aaa;
@@ -162,16 +174,94 @@
 
 .swiper-pagination-bullet-active {
   background: var(--color-header-brand);
+} */
+
+.slider-btn {
+  background: var(--color-accent); /* Або ваш колір (наприклад, синій) */
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
 }
 
-.sale__filters {
-  margin-bottom: 20px;
-  text-align: center;
+.slider-btn:hover {
+  background: #aaa;
+  opacity: 1;
 }
 
-.sale__filter-select {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* --- Адаптивність --- */
+
+/* Екран <= 1200px: 5 слайдів */
+@media (max-width: 1200px) {
+  .slide {
+    flex: 0 0 20%;
+  }
+  .slider-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+/* Екран <= 992px: 4 слайди */
+@media (max-width: 992px) {
+  .slide {
+    flex: 0 0 25%;
+  }
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+/* Екран <= 768px: 3 слайди */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 33.33%;
+  }
+  .slider-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}
+
+/* Екран <= 576px: 2 слайди */
+@media (max-width: 576px) {
+  .slide {
+    flex: 0 0 50%;
+  }
+  .slider-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+
+/* Екран <= 400px: 1 слайд */
+@media (max-width: 400px) {
+  .slide {
+    flex: 0 0 100%;
+  }
 }
