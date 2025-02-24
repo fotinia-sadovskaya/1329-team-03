@@ -4,7 +4,7 @@
     <h2 class="title">SALE</h2>
     <p class="subtitle">
       <span class="divider-span">/</span>
-      TECHNOLOGY THAT KEEPS YOU AHEAD 
+      TECHNOLOGY THAT KEEPS YOU AHEAD
       <span class="divider-span">/</span>
     </p>
     <p class="description">
@@ -13,32 +13,41 @@
     <div class="divider"></div>
   </div>
   <div class="sale__choose-currency-filters">
-  <div class="sale__choose-currency">
-    <label for="currency-select" class="popular-products__currency-label">Choose currency:</label>
-    <select id="currency-select" class="products__currency">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="UAH">UAH</option>
-      <option value="PLN">PLN</option>
-      <option value="BGN">BGN</option>
-    </select>
+    <div class="sale__choose-currency">
+      <label for="currency-select" class="popular-products__currency-label"
+        >Choose currency:</label
+      >
+      <select id="currency-select" class="products__currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="UAH">UAH</option>
+        <option value="PLN">PLN</option>
+        <option value="BGN">BGN</option>
+      </select>
+    </div>
+    <div class="sale__filters">
+      <label for="category-filter" class="sale__filter-label"
+        >Choose category:</label
+      >
+      <select id="category-filter" class="sale__filter-select">
+        <option value="all">All</option>
+        <option value="monitors">Monitors</option>
+        <option value="headphones">Headphones</option>
+        <option value="keyboards">Keyboards</option>
+        <option value="mice">Mice</option>
+        <option value="microphones">Microphones</option>
+      </select>
+    </div>
   </div>
-  <div class="sale__filters">
-    <label for="category-filter" class="sale__filter-label">Choose category:</label>
-    <select id="category-filter" class="sale__filter-select">
-      <option value="all">All</option>
-      <option value="monitors">Monitors</option>
-      <option value="headphones">Headphones</option>
-      <option value="keyboards">Keyboards</option>
-      <option value="mice">Mice</option>
-      <option value="microphones">Microphones</option>
-    </select>
-  </div>
-</div>
   <div class="sale__carousel">
     <div class="product-gallery__items">
       <div class="product-gallery__grid">
-        <article class="product-card">
+        <article
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="./cards/pixelview-flex.html"
+        ></article>
+        <!-- <article class="product-card">
           <a href="#" class="product-card__link">
             <img
               class="product-card__image"
@@ -62,8 +71,14 @@
           <button class="btn btn-disabled" type="button" disabled>
             Buy now
           </button>
-        </article>
-        <article class="product-card">
+        </article> -->
+
+        <article
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="./cards/pulsesound.html"
+      ></article>
+        <!-- <article class="product-card">
           <a href="#" class="product-card__link">
             <img
               class="product-card__image"
@@ -85,8 +100,14 @@
             <span class="product-card__price-new">$105.00USD</span>
           </div>
           <button class="btn btn-primary" type="submit">Buy now</button>
-        </article>
-        <article class="product-card">
+        </article> -->
+
+        <article
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="./cards/neurokey.html"
+      ></article>
+        <!-- <article class="product-card">
           <a href="#" class="product-card__link">
             <button type="button" class="btn btn-secondary">Sale</button>
             <div class="product-card__preview">
@@ -125,8 +146,14 @@
             <span class="product-card__price-new">$32,00USD</span>
           </div>
           <button class="btn btn-primary" type="submit">Buy now</button>
-        </article>
-        <article class="product-card">
+        </article> -->
+
+        <article
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="./cards/syncview.html"
+      ></article>    
+        <!-- <article class="product-card">
           <a href="#" class="product-card__link">
             <div class="product-card__preview">
               <img
@@ -145,7 +172,7 @@
             <span class="product-card__price-new">$225,99USD</span>
           </div>
           <button class="btn btn-primary" type="submit">Buy now</button>
-        </article>
+        </article> -->
       </div>
     </div>
   </div>
