@@ -73,8 +73,6 @@
   transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
 }
 
-
-
 .slider-btn:hover {
   background: #aaa;
   opacity: 1;
