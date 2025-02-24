@@ -104,7 +104,7 @@
   border-color: none;
 }
 
-/* .sale__carousel {
+.swiper-container {
   position: relative;
   flex: 0 0 14%;
   background: rgba(39, 39, 39, 0.03);
@@ -116,9 +116,9 @@
   justify-content: center;
 }
 
-.carousel__prev,
-.carousel__next {
-  background: var(--color-accent);
+.swiper-button-next,
+.swiper-button-prev {
+  background: var(--color-accent); /* Або ваш колір (наприклад, синій) */
   color: #fff;
   border: none;
   width: 40px;
@@ -137,58 +137,19 @@
   transition: background 0.3s, opacity 0.3s, width 0.3s, height 0.3s;
 }
 
-.carousel__next:hover,
-.scarousel__prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   background: #aaa;
   opacity: 1;
 }
 
-.carousel__prev {
+.swiper-button-prev {
   left: 15px;
 }
 
-.carousel__next {
+.swiper-button-next {
   right: 15px;
-} */
-
-.sale__carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
 }
-
-.product-gallery__track {
-  display: flex;
-  transition: transform 0.3s ease-in-out;
-}
-
-.product-card {
-  width: 300px;
-  flex-shrink: 0;
-  margin-right: 20px;
-}
-
-.carousel__prev,
-.carousel__next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.carousel__prev {
-  left: 10px;
-}
-
-.carousel__next {
-  right: 10px;
-}
-
 
 .swiper-pagination {
   position: absolute;
