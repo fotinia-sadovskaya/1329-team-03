@@ -1,7 +1,6 @@
 import { addProductToCart } from "./global.cart.js";
 
-let productsData = []; // Глобальна змінна для збереження п, () => {
-  initSaleCarousel();
+let productsData = []; // Глобальна змінна для збереження продуктів
 
 function initSaleCarousel() {
   const carouselTrack = document.querySelector(".product-gallery__track");
@@ -10,8 +9,8 @@ function initSaleCarousel() {
   const categoryFilter = document.querySelector("#category-filter");
 
   let slideIndex = 0;
-  const slideWidth = 300; // Ширина одного товару (змінюй, якщо треба)
-  const slidesToShow = 3; // Скільки товарів одночасно видно
+  const slideWidth = 300; // Ширина одного товару (змінюй за потреби)
+  const slidesToShow = 3; // Кількість товарів, що видно одночасно
 
   // Завантаження JSON
   fetch("api/cards.json")
@@ -120,6 +119,9 @@ function initSaleCarousel() {
     }
   });
 }
+
+// Викликаємо функцію одразу
+initSaleCarousel();
 
 
 // import { addProductToCart } from "./global.cart.js";
