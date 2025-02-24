@@ -1,10 +1,7 @@
 import { addProductToCart } from "./global.cart.js";
 
-let productsData = []; // Глобальна змінна для збереження продуктів
-
-document.addEventListener("DOMContentLoaded", () => {
+let productsData = []; // Глобальна змінна для збереження п, () => {
   initSaleCarousel();
-});
 
 function initSaleCarousel() {
   const carouselTrack = document.querySelector(".product-gallery__track");
