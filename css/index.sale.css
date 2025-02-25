@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* height: 100%; */
   margin: 80px auto 0;
   padding: 0;
   overflow-x: hidden;
@@ -116,7 +117,7 @@
   border: 1px solid #ccc;
 }
 
-.sale__carousel__slider-container {
+.sale__carousel__container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -136,55 +137,13 @@
 }
 
 /* Основна стрічка слайдів */
-.slider {
+.carousel {
   display: flex;
-  gap: 20px; /* Відступ між картками */
-  transition: transform 0.5s ease-in-out;
-  will-change: transform; /* Оптимізація анімації */
-}
-
-.slide-article {
-  flex: 1 0 calc(100% / 5 - 20px); /* За замовчуванням 4 картки */
-  min-width: calc(100% / 5 - 20px);
-}
-
-@media (max-width: 992px) {
-  .slide-article {
-    flex: 1 0 calc(100% / 4 - 20px); /* 3 картки */
-    min-width: calc(100% / 4 - 20px);
-  }
-}
-
-@media (max-width: 768px) {
-  .slide-article {
-    flex: 1 0 calc(100% / 3 - 20px); /* 2 картки */
-    min-width: calc(100% / 3 - 20px);
-  }
-}
-
-@media (max-width: 576px) {
-  .slide-article {
-    flex: 1 0 calc(100% / 2 - 20px); /* 2 картки */
-    min-width: calc(100% / 2 - 20px);
-  }
-
-  .sale__choose-currency-filters {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: first baseline;
-    gap: 20px;
-    margin: 20px 0;
-    padding: 0 20px;
-  }
-
-}
-
-@media (max-width: 400px) {
-  .slide-article {
-    flex: 1 0 100%; /* 1 картка */
-    min-width: 100%;
-  }
+  position: relative;
+  transition: opacity 1850ms ease-in-out;
+  will-change: opacity, transform;
+  min-height: 450px;
+  margin: 0 auto;
 }
 
 /* Кнопки "Назад" і "Вперед" */
@@ -221,59 +180,65 @@
   right: 15px;
 }
 
-/* --- Адаптивність --- */
-
-/* Екран <= 1200px: 5 слайдів */
-/* @media (max-width: 1200px) {
-  .slide {
-    flex: 0 0 20%;
+@media (max-width: 1200px) {
+  .slide-article {
+    flex: 1 0 calc(100% / 5 - 20px); /* За замовчуванням 5 картoк */
+    min-width: calc(100% / 5 - 20px);
   }
-  .slider-btn {
+
+  .carousel-btn {
     width: 35px;
     height: 35px;
     font-size: 18px;
   }
-} */
+}
 
-/* Екран <= 992px: 4 слайди */
-/* @media (max-width: 992px) {
-  .slide {
-    flex: 0 0 25%;
+@media (max-width: 992px) {
+  .slide-article {
+    flex: 1 0 calc(100% / 4 - 20px); /* 4 картки */
+    min-width: calc(100% / 4 - 20px);
   }
-  .slider-btn {
+
+  .carousel-btn {
     width: 30px;
     height: 30px;
     font-size: 16px;
   }
-} */
+}
 
-/* Екран <= 768px: 3 слайди */
-/* @media (max-width: 768px) {
-  .slide {
-    flex: 0 0 33.33%;
+@media (max-width: 768px) {
+  .slide-article {
+    flex: 1 0 calc(100% / 3 - 20px); /* 3 картки */
+    min-width: calc(100% / 3 - 20px);
   }
-  .slider-btn {
+
+  .carousel-btn {
     width: 25px;
     height: 25px;
     font-size: 14px;
   }
-} */
+}
 
-/* Екран <= 576px: 2 слайди */
-/* @media (max-width: 576px) {
-  .slide {
-    flex: 0 0 50%;
+@media (max-width: 496px) {
+  .slide-article {
+    flex: 1 0 calc(100% / 2 - 20px); /* 2 картки */
+    min-width: calc(100% / 2 - 20px);
   }
-  .slider-btn {
+
+  .carousel-btn {
     width: 20px;
     height: 20px;
     font-size: 12px;
   }
-} */
 
-/* Екран <= 400px: 1 слайд */
-/* @media (max-width: 400px) {
-  .slide {
-    flex: 0 0 100%;
+  .sale__choose-currency-filters {
+    flex-direction: column;
   }
-} */
+}
+
+@media (max-width: 320px) {
+  .slide-article {
+    flex: 1 0 100%; /* 1 картка */
+    min-width: 100%;
+  }
+}
