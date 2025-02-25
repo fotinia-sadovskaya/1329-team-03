@@ -181,7 +181,7 @@
 }
 
 @media (max-width: 1200px) {
-  .slide-article {
+  .carousel-slide {
     flex: 1 0 calc(100% / 5 - 20px); /* За замовчуванням 5 картoк */
     min-width: calc(100% / 5 - 20px);
   }
@@ -194,7 +194,7 @@
 }
 
 @media (max-width: 992px) {
-  .slide-article {
+  .carousel-slide {
     flex: 1 0 calc(100% / 4 - 20px); /* 4 картки */
     min-width: calc(100% / 4 - 20px);
   }
@@ -207,7 +207,7 @@
 }
 
 @media (max-width: 768px) {
-  .slide-article {
+  .carousel-slide {
     flex: 1 0 calc(100% / 3 - 20px); /* 3 картки */
     min-width: calc(100% / 3 - 20px);
   }
@@ -220,7 +220,7 @@
 }
 
 @media (max-width: 496px) {
-  .slide-article {
+  .carousel-slide {
     flex: 1 0 calc(100% / 2 - 20px); /* 2 картки */
     min-width: calc(100% / 2 - 20px);
   }
@@ -237,7 +237,7 @@
 }
 
 @media (max-width: 320px) {
-  .slide-article {
+  .carousel-slide {
     flex: 1 0 100%; /* 1 картка */
     min-width: 100%;
   }

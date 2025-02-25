@@ -1,17 +1,17 @@
 const slides = [
-  `<div class="slide-article">
+  `<div class="carousel-slide">
       <article data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="./cards/pixelview-flex.html"></article>
     </div>`,
-  `<div class="slide-article">
+  `<div class="carousel-slide">
       <article data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="./cards/pulsesound.html"></article>
     </div>`,
-  `<div class="slide-article">
+  `<div class="carousel-slide">
       <article data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="./cards/neurokey.html"></article>
     </div>`,
-  `<div class="slide-article">
+  `<div class="carousel-slide">
       <article data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="./cards/aerogrip.html"></article>
     </div>`,
-  `<div class="slide-article">
+  `<div class="carousel-slide">
       <article data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="./cards/syncview.html"></article>
     </div>`,
 ];
